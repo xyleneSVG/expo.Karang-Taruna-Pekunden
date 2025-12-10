@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { cookies } from "next/headers";
-import { AndroidLauncher } from "@/components/android-launcher";
-import { aesDecrypt } from "@/utils/decrypt";
+import { AndroidLauncher } from "../components/android-launcher";
+import { aesDecrypt } from "../utils/decrypt";
 
 export default async function Home() {
   const cookieStore = cookies();
