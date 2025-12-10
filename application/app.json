@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "expo-karang-taruna-pekunden",
+    "slug": "expo-karang-taruna-pekunden",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "expo-karang-taruna-pekunden",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.xylenesvg.expokarangtarunapekunden"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.xylenesvg.expokarangtarunapekunden"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "acf0249f-2de9-40f6-b94a-e511ceb8c6f0"
+      }
+    },
+    "owner": "xylenesvg",
+    "updates": {
+      "url": "https://u.expo.dev/acf0249f-2de9-40f6-b94a-e511ceb8c6f0"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
+  }
+}
