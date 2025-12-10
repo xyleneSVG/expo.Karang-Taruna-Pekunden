@@ -24,7 +24,9 @@
       "distribution": "internal",
       "channel": "main",
       "android": {
-        "image": "latest"
+        "image": "latest",
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
       },
       "ios": {
         "image": "latest"
@@ -34,7 +36,9 @@
       "channel": "production",
       "autoIncrement": true,
       "android": {
-        "image": "latest"
+        "buildType": "apk",
+        "image": "latest",
+        "gradleCommand": ":app:assembleRelease"
       },
       "ios": {
         "image": "latest"
