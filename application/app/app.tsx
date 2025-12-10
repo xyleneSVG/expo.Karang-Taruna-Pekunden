@@ -13,7 +13,7 @@ export default function WebPage() {
   return (
     <WebView
       style={styles.container}
-      source={{ uri: "http://192.168.204.169:3000/" }}
+      source={{ uri: process.env.URL_WEB! }}
       injectedJavaScript={injected}
       sharedCookiesEnabled={true}
       thirdPartyCookiesEnabled={true}
