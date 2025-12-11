@@ -18,7 +18,7 @@ export function DockBar({ activePage, onPageChange }: DockBarProps) {
     <div
       className="absolute left-1/2 -translate-x-1/2 bottom-0 flex items-center justify-around backdrop-blur-2xl rounded-3xl border border-border"
       style={{
-        bottom: "3vh",
+        bottom: "10vh",
         width: "85vw",
         height: "9vh",
         background: "rgba(255, 255, 255, 0.1)",

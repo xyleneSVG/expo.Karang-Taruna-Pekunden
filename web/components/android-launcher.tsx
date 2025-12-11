@@ -116,7 +116,6 @@ export function AndroidLauncher() {
         className="relative flex flex-col"
         style={{
           paddingTop: "5vh",
-          paddingBottom: "12vh",
           height: "100vh",
         }}
       >
