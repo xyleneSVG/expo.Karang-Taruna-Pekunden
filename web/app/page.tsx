@@ -13,8 +13,8 @@ export default async function Home() {
   }
 
   return (
-    <div>
-      <h1>Access Denied wleee :p</h1>
+    <div className="flex justify-center items-center h-screen bg-[#212121]">
+      <h1 className="w-max uppercase font-bold text-[5vw]">Access Denied wleee :p</h1>
     </div>
   );
 }
