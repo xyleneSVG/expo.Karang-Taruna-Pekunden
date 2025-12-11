@@ -1,25 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 
-import { ArrowLeft, MapPin, Calendar, Mail } from "lucide-react"
+import { MapPin, Calendar, Mail } from "lucide-react"
 import { apps } from "../android-launcher"
 
-interface ProfilePageProps {
-  onBack: () => void
-}
-
-export function ProfilePage({ onBack }: ProfilePageProps) {
+export function ProfilePage() {
   return (
     <div className="flex-1 flex flex-col px-[4vw]" style={{ paddingTop: "2vh" }}>
       {/* Header */}
       <div className="flex items-center" style={{ marginBottom: "3vh" }}>
-        <button
-          onClick={onBack}
-          className="flex items-center justify-center rounded-full bg-foreground/10"
-          style={{ width: "10vw", height: "10vw" }}
-        >
-          <ArrowLeft className="text-foreground" style={{ width: "5vw", height: "5vw" }} />
-        </button>
         <h1 className="text-foreground font-bold" style={{ fontSize: "5vw", marginLeft: "4vw" }}>
           Profile
         </h1>

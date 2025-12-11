@@ -1,10 +1,6 @@
 "use client"
 
-import { ArrowLeft, Bell, Moon, Globe, Shield, HelpCircle, ChevronRight } from "lucide-react"
-
-interface SettingsPageProps {
-  onBack: () => void
-}
+import { Bell, Moon, Globe, Shield, HelpCircle, ChevronRight } from "lucide-react"
 
 const settingsItems = [
   { name: "Notifications", icon: Bell, description: "Manage alerts" },
@@ -14,18 +10,11 @@ const settingsItems = [
   { name: "Help", icon: HelpCircle, description: "FAQ & support" },
 ]
 
-export function SettingsPage({ onBack }: SettingsPageProps) {
+export function SettingsPage() {
   return (
     <div className="flex-1 flex flex-col px-[4vw]" style={{ paddingTop: "2vh" }}>
       {/* Header */}
       <div className="flex items-center" style={{ marginBottom: "3vh" }}>
-        <button
-          onClick={onBack}
-          className="flex items-center justify-center rounded-full bg-foreground/10"
-          style={{ width: "10vw", height: "10vw" }}
-        >
-          <ArrowLeft className="text-foreground" style={{ width: "5vw", height: "5vw" }} />
-        </button>
         <h1 className="text-foreground font-bold" style={{ fontSize: "5vw", marginLeft: "4vw" }}>
           Settings
         </h1>
