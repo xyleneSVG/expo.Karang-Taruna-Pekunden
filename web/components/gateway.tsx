@@ -13,11 +13,6 @@ export default function WebGateway({ expo }: { expo: string }) {
   const SECRET_EXPO = process.env.NEXT_PUBLIC_TOKEN_SECRET!;
   const SECRET_URL_KEY = process.env.NEXT_PUBLIC_TOKEN_URL!;
 
-  console.log("expo prop:", JSON.stringify(expo));
-  console.log("secret expo:", JSON.stringify(SECRET_EXPO));
-  console.log("urlToken:", JSON.stringify(urlToken));
-  console.log("secret URL:", JSON.stringify(SECRET_URL_KEY));
-
   const isExpoValid = expo === SECRET_EXPO && expo !== "";
   const isUrlTokenValid = urlToken === SECRET_URL_KEY && urlToken !== "";
 
