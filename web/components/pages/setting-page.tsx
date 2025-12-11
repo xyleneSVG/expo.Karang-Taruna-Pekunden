@@ -1,6 +1,7 @@
 "use client"
 
 import { Bell, Moon, Globe, Shield, HelpCircle, ChevronRight } from "lucide-react"
+import { motion } from "framer-motion"
 
 const settingsItems = [
   { name: "Notifications", icon: Bell, description: "Manage alerts" },
@@ -14,11 +15,17 @@ export function SettingsPage() {
   return (
     <div className="flex-1 flex flex-col px-[4vw]" style={{ paddingTop: "2vh" }}>
       {/* Header */}
-      <div className="flex items-center" style={{ marginBottom: "3vh" }}>
+      <motion.div
+        className="flex items-center"
+        style={{ marginBottom: "3vh" }}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <h1 className="text-foreground font-bold" style={{ fontSize: "5vw", marginLeft: "4vw" }}>
           Settings
         </h1>
-      </div>
+      </motion.div>
 
       {/* Settings List */}
       <div
@@ -28,13 +35,17 @@ export function SettingsPage() {
         {settingsItems.map((item, index) => {
           const Icon = item.icon
           return (
-            <button
+            <motion.button
               key={item.name}
               className="w-full flex items-center justify-between transition-colors hover:bg-foreground/5"
               style={{
                 padding: "4vw",
-                borderBottom: index < settingsItems.length - 1 ? "1px solid rgba(255,255,255,0.1)" : "none",
+                borderBottom:
+                  index < settingsItems.length - 1 ? "1px solid rgba(255,255,255,0.1)" : "none",
               }}
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1, type: "spring", stiffness: 300 }}
             >
               <div className="flex items-center">
                 <div
@@ -53,15 +64,21 @@ export function SettingsPage() {
                 </div>
               </div>
               <ChevronRight className="text-foreground/30" style={{ width: "5vw", height: "5vw" }} />
-            </button>
+            </motion.button>
           )
         })}
       </div>
 
       {/* Version */}
-      <p className="text-foreground/30 text-center" style={{ fontSize: "3vw", marginTop: "3vh" }}>
+      <motion.p
+        className="text-foreground/30 text-center"
+        style={{ fontSize: "3vw", marginTop: "3vh" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+      >
         Pekunden UI Beta1.0
-      </p>
+      </motion.p>
     </div>
   )
 }

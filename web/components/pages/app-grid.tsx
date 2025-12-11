@@ -1,8 +1,8 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
+import { motion } from "framer-motion"
 import { AppIcon } from "../launcher/app-icon"
 import type { AppType } from "../android-launcher"
 import {
@@ -81,19 +81,31 @@ export function AppGrid({ apps, showNoResults }: AppGridProps) {
           rowGap: "2.5vh",
         }}
       >
-        {apps.map((app) => {
+        {apps.map((app, index) => {
           const IconComponent = iconMap[app.icon]
           return (
-            <AppIcon
+            <motion.div
               key={app.name}
-              name={app.name}
-              icon={IconComponent}
-              color={app.color}
-              url={app.url}
-              isPressed={pressedApp === app.name}
-              onPressStart={() => setPressedApp(app.name)}
-              onPressEnd={() => setPressedApp(null)}
-            />
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+              }}
+            >
+              <AppIcon
+                name={app.name}
+                icon={IconComponent}
+                color={app.color}
+                url={app.url}
+                isPressed={pressedApp === app.name}
+                onPressStart={() => setPressedApp(app.name)}
+                onPressEnd={() => setPressedApp(null)}
+              />
+            </motion.div>
           )
         })}
       </div>
